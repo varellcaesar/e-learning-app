@@ -27,8 +27,8 @@ const jobs = Array(6).fill({
 
 const CariLowonganContainer = () => {
   return (
-    <div className="lg:max-w-7xl mx-auto mt-6 px-4 h-screen overflow-y-auto py-14">
-      <div className="bg-teal-700 text-white rounded-t-xl pt-6 px-6 flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0 md:space-x-6 shadow-md max-w-7xl mx-auto">
+    <div className="max-w-7xl mx-auto mt-6 px-4 h-screen overflow-y-auto py-14">
+      <div className="bg-teal-700 text-white rounded-t-xl pt-6 px-6 flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0 md:space-x-6 shadow-md max-w-5xl mx-auto">
         <div className="text-5xl font-semibold md:w-1/2">
           <p>Cari lowongan melalui</p>
           <p>BEN Indonesia</p>
@@ -38,7 +38,7 @@ const CariLowonganContainer = () => {
         </div>
       </div>
 
-      <div className="bg-white rounded-xl shadow-md p-4 space-y-3 w-full max-w-7xl mx-auto">
+      <div className="bg-white rounded-xl shadow-md p-4 space-y-3 w-full max-w-5xl mx-auto">
         <div className="flex items-center bg-gray-50 overflow-hidden">
           <input
             type="text"
