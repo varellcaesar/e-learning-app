@@ -2,11 +2,40 @@
 
 import PAGE_NAME from "@web-learning/constants/page_name";
 import ICONS from "@web-learning/public/assets/icons";
+import { LOCAL_STORAGE_KEYS } from "@web-learning/utils/constants";
+import { localStorageExt } from "@web-learning/utils/local-storage";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { redirect, useRouter, useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
 
 const LoginPage = () => {
+  const [user, setUser] = useState({ username: "", password: "" });
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const urlSearch = searchParams.get("url") || "";
+  const users = localStorageExt.getToken();
+
+  const urlPathCallback = (): string => {
+    let url = "";
+    if (urlSearch) {
+      const urlLen = location.search?.length;
+      url = location.search?.slice?.(5, urlLen);
+    }
+    return url;
+  };
+
+  const handleLogin = () => {
+    localStorageExt.setLocalStorage(LOCAL_STORAGE_KEYS.USER_INFO, user);
+  };
+
+  useEffect(() => {
+    if (users) {
+      return redirect(
+        urlPathCallback() ? urlPathCallback() : PAGE_NAME.cari_lowongan
+      );
+    }
+  }, [users, router]);
+
   return (
     <div className="flex h-[100vh] justify-center bg-[#F9FAFB]">
       <div className="flex flex-1 justify-center items-center">
@@ -37,6 +66,9 @@ const LoginPage = () => {
                   type="text"
                   className="mt-1 w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 placeholder:text-gray-400 text-[#1E1F24]"
                   placeholder="Username atau email"
+                  onChange={(e) =>
+                    setUser({ ...user, username: e.target.value })
+                  }
                 />
               </div>
 
@@ -56,6 +88,9 @@ const LoginPage = () => {
                   type="password"
                   className="mt-1 w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 placeholder:text-gray-400 text-[#1E1F24]"
                   placeholder="Kata sandi"
+                  onChange={(e) =>
+                    setUser({ ...user, password: e.target.value })
+                  }
                 />
               </div>
 
@@ -74,8 +109,9 @@ const LoginPage = () => {
               </div>
 
               <button
+                onClick={handleLogin}
                 type="submit"
-                className="w-full py-2 px-4 bg-teal-600 text-white rounded-lg hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full py-2 px-4 bg-teal-600 text-white rounded-lg hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 cursor-pointer"
               >
                 Masuk
               </button>
