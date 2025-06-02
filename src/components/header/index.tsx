@@ -12,16 +12,13 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = (props) => {
   return (
     <nav className="fixed top-0 left-0 right-0 w-full bg-white shadow-sm px-6 py-2 flex items-center justify-between z-50">
-      {/* <!-- Left: Logo --> */}
       <div className="flex items-center space-x-4">
         <Image src={ICONS.SmallBenLogo} alt="BEN Talent Centre Logo" />
       </div>
 
-      {/* <!-- Center: Navigation links --> */}
       <div className="flex space-x-8 text-sm font-medium text-gray-600">
         {props.children}
       </div>
-      {/* <!-- Right: Notification + User --> */}
       <div
         className="flex items-center space-x-4 relative"
         ref={props.dropdownRef}
