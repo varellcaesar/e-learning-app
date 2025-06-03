@@ -27,6 +27,8 @@ import SignalIcon from "./signal-icon.svg";
 import ProfileFillIcon from "./profile-fill-icon.svg";
 import BookmarkFillIcon from "./bookmark-fill-icon.svg";
 import ChevronRightIcon from "./chevron-right-icon.svg";
+import LikeIcon from "./like-icon.svg";
+import CommentIcon from "./comment-icon.svg";
 const ICONS = {
   BenLogo,
   SmallBenLogo,
@@ -56,7 +58,9 @@ const ICONS = {
   SignalIcon,
   ProfileFillIcon,
   BookmarkFillIcon,
-  ChevronRightIcon
+  ChevronRightIcon,
+  LikeIcon,
+  CommentIcon,
 };
 
 export default ICONS;

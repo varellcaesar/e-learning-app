@@ -10,6 +10,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import type { Swiper as SwiperType } from "swiper";
+import { User } from "lucide-react";
 
 const learningSummary = [
   {
