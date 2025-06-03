@@ -99,7 +99,7 @@ const CommunityContainer = () => {
 
   return (
     <div className="max-w-7xl mx-auto mt-6 px-4 h-screen overflow-y-auto py-14">
-      <div className="flex items-center justify-between rounded-xl pl-8 pt-6 bg-teal-700 text-white overflow-hidden max-w-5xl mx-auto">
+      <div className="flex items-center justify-between rounded-xl pl-8 pt-6 bg-gradient-to-r from-teal-800 to-teal-500 text-white overflow-hidden max-w-5xl mx-auto">
         {/* Left Text Section */}
         <div>
           <h2 className="text-4xl text-white font-semibold mb-1">Komunitas</h2>
@@ -166,7 +166,7 @@ const CommunityContainer = () => {
           {displayedData.map((item, index) => (
             <div
               key={`${item.id}-${index}`}
-              className="w-[320px] rounded-xl border border-gray-200 shadow-sm overflow-hidden bg-white flex flex-col justify-between flex-1"
+              className="w-[320px] rounded-xl border border-[#D9DAE1] shadow-sm overflow-hidden bg-white flex flex-col justify-between flex-1"
             >
               {/* Image */}
               <Image src={item.image} alt="News" />
