@@ -22,7 +22,7 @@ const jobs = Array(6).fill({
   location: "Jakarta Selatan",
   experience: "Min. 4 tahun pengalaman",
   salary: "Rp8.000.000 - 12.000.000",
-  logo: "/iss-logo.png",
+  logo: IMAGES.JobImage
 });
 
 const CariLowonganContainer = () => {
@@ -38,7 +38,7 @@ const CariLowonganContainer = () => {
         </div>
       </div>
 
-      <div className="bg-white rounded-xl shadow-md p-4 space-y-3 w-full max-w-5xl mx-auto">
+      <div className="bg-white rounded-b-xl shadow-md p-4 space-y-3 w-full max-w-5xl mx-auto">
         <div className="flex items-center bg-gray-50 overflow-hidden">
           <input
             type="text"
@@ -122,7 +122,7 @@ const CariLowonganContainer = () => {
 
             {/* <!-- Header --> */}
             <div className="flex items-start space-x-3">
-              <Image src={IMAGES.JobImage} alt="Job Icon" />
+              <Image src={job.logo} alt="Job Icon" />
               <div>
                 <p className="font-semibold text-gray-900 text-sm">
                   {job.title}
