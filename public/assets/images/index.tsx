@@ -5,6 +5,7 @@ import PeopleBaner from "./people-baner.png";
 import PersonalCommunityThumbnail from "./personal-community-image.svg";
 import NewsThumbnail from "./thumbnail-news.svg";
 import GroupThumbnail from "./thumbnail-group.svg";
+import AllGroupThumbnail from "./thumbnail-all-group.svg"
 
 const IMAGES = {
   Banner,
@@ -14,6 +15,7 @@ const IMAGES = {
   PersonalCommunityThumbnail,
   NewsThumbnail,
   GroupThumbnail,
+  AllGroupThumbnail
 };
 
 export default IMAGES;

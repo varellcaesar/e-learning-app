@@ -53,7 +53,7 @@ const LearningContainer = () => {
   return (
     <div className="max-w-7xl mx-auto mt-6 px-4 h-screen overflow-y-auto py-14">
       {/* Component Banner */}
-      <div className="bg-gradient-to-r from-teal-800 to-teal-500 rounded-t-xl px-6 pt-6 flex justify-between items-center text-white w-full max-w-5xl mx-auto overflow-hidden shadow-md">
+      <div className="bg-gradient-to-tr from-teal-800 to-teal-500 rounded-t-xl px-6 pt-6 flex justify-between items-center text-white w-full max-w-5xl mx-auto overflow-hidden shadow-md">
         <div>
           <h2 className="text-4xl font-semibold text-white">Learning</h2>
           <p className="text-xl font-normal text-white mt-1">
