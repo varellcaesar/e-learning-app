@@ -34,6 +34,33 @@ const news = [
     likes: 85,
     comments: 20,
   },
+  {
+    id: 3,
+    image: IMAGES.NewsThumbnail,
+    tags: ["Buruh", "Serikat Pekerja"],
+    title: "Kisah Buruh di May Day 2025",
+    date: "1 Mei 2025",
+    likes: 98,
+    comments: 30,
+  },
+  {
+    id: 4,
+    image: IMAGES.NewsThumbnail,
+    tags: ["Kontrak", "PHK"],
+    title: "Gelombang PHK Besar di Awal 2025",
+    date: "17 Maret 2025",
+    likes: 120,
+    comments: 45,
+  },
+  {
+    id: 5,
+    image: IMAGES.NewsThumbnail,
+    tags: ["Inovasi", "Swasta"],
+    title: "Talentlytics Luncurkan SIAP untuk Pekerja Blue Collar",
+    date: "17 Oktober 2024",
+    likes: 85,
+    comments: 20,
+  },
 ];
 
 const group = [
@@ -136,16 +163,16 @@ const CommunityContainer = () => {
 
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {displayedData.map((item) => (
+          {displayedData.map((item, index) => (
             <div
-              key={item.id}
+              key={`${item.id}-${index}`}
               className="w-[320px] rounded-xl border border-gray-200 shadow-sm overflow-hidden bg-white flex flex-col justify-between flex-1"
             >
               {/* Image */}
               <Image src={item.image} alt="News" />
 
               {/* Content */}
-              <div className="p-4 space-y-3">
+              <div className="p-4 space-y-1">
                 <div className="flex flex-wrap gap-2">
                   {item.tags.map((tag, idx) => (
                     <span
@@ -166,13 +193,13 @@ const CommunityContainer = () => {
                 <span className="text-sm text-[#5C5A57] font-normal">
                   {item.date}
                 </span>
-                <span className="flex items-center gap-1">
+                <span className="flex items-center gap-1 cursor-pointer">
                   <Image src={ICONS.LikeIcon} alt="Icon Like" />{" "}
                   <span className="text-sm text-[#5C5A57] font-normal">
                     {item.likes}
                   </span>
                 </span>
-                <span className="flex items-center gap-1">
+                <span className="flex items-center gap-1 cursor-pointer">
                   <Image src={ICONS.CommentIcon} alt="Icon Comment" />{" "}
                   <span className="text-sm text-[#5C5A57] font-normal">
                     {item.comments}
