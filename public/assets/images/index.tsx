@@ -1,9 +1,19 @@
 import Banner from "./banner.svg";
-import JobImage from "./job-image.svg"
+import JobImage from "./job-image.svg";
+import CourseThumbnail from "./course-thumbnail.svg";
+import PeopleBaner from "./people-baner.png";
+import PersonalCommunityThumbnail from "./personal-community-image.svg";
+import NewsThumbnail from "./thumbnail-news.svg";
+import GroupThumbnail from "./thumbnail-group.svg";
 
 const IMAGES = {
   Banner,
-  JobImage
+  JobImage,
+  CourseThumbnail,
+  PeopleBaner,
+  PersonalCommunityThumbnail,
+  NewsThumbnail,
+  GroupThumbnail,
 };
 
 export default IMAGES;

@@ -17,6 +17,18 @@ import ExperienceIcon from "./experience-icon.svg";
 import SalaryIcon from "./salary-icon.svg";
 import SaveIcon from "./save-icon.svg";
 import SearchIcon from "./search-icon.svg";
+import BookIcon from "./book-icon.svg";
+import ThropyIcon from "./trophy.svg";
+import AudioWaveformIcon from "./audio-waveform.svg";
+import CourseIcon from "./course-icon.svg";
+import TagIcon from "./tag-icon.svg";
+import DurationIcon from "./duration-icon.svg";
+import SignalIcon from "./signal-icon.svg";
+import ProfileFillIcon from "./profile-fill-icon.svg";
+import BookmarkFillIcon from "./bookmark-fill-icon.svg";
+import ChevronRightIcon from "./chevron-right-icon.svg";
+import LikeIcon from "./like-icon.svg";
+import CommentIcon from "./comment-icon.svg";
 const ICONS = {
   BenLogo,
   SmallBenLogo,
@@ -36,7 +48,19 @@ const ICONS = {
   ExperienceIcon,
   SalaryIcon,
   SaveIcon,
-  SearchIcon
+  SearchIcon,
+  BookIcon,
+  ThropyIcon,
+  AudioWaveformIcon,
+  CourseIcon,
+  TagIcon,
+  DurationIcon,
+  SignalIcon,
+  ProfileFillIcon,
+  BookmarkFillIcon,
+  ChevronRightIcon,
+  LikeIcon,
+  CommentIcon,
 };
 
 export default ICONS;
